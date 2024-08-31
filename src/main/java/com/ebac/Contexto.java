@@ -67,8 +67,11 @@ public class Contexto {
         biblioteca.addUserList(usuario2);
 
         //Listas
+        System.out.println("Lista de Autores");
         biblioteca.getAutorList();
+        System.out.println("Lista de Libros");
         biblioteca.getBookList();
+        System.out.println("Lista de Usuarios");
         biblioteca.getUsuarioList();
 
         System.out.println("---------------");
