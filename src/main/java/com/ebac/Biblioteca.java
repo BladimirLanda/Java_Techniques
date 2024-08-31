@@ -116,9 +116,10 @@ public class Biblioteca {
         return bookStream.allMatch(p -> p.getPublicacion() < 2010);
     }
 
-    public void primerLibro(List<Book> list) {
+    public void primerLibro(List<Book> list) throws Exception {
         Stream<Book> bookStream = list.stream();
-        System.out.println(bookStream.findFirst().orElseThrow());
+        System.out.println(bookStream.findFirst().orElseThrow(() ->
+                new Exception("La lista de 'usuarios' está vacia")));
     }
 
     public void autoresConF(List<Autor> list) {
