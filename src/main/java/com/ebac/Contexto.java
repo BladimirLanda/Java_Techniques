@@ -46,7 +46,6 @@ public class Contexto {
         biblioteca.addAutorList(autor1);
         biblioteca.addAutorList(autor2);
         biblioteca.removeAutorList(autor2);
-        biblioteca.getAutorList();
 
         biblioteca.addAutorList(autor2);
 
