@@ -76,7 +76,7 @@ public class Contexto {
         System.out.println("---------------");
 
         //Sistema Validación
-        System.out.println(name + apellido +" " + "está registrado: " + biblioteca.validacion(usuarios,name, apellido));
+        System.out.println(name + apellido +" " + "está registrado: " + biblioteca.validacion(usuarios, name, apellido));
         //Sistema Biblioteca
         System.out.println("La cuenta de autores es: " + biblioteca.cuentaAutores(autores));
         System.out.println("Alguno usuario tiene más de 10 libros prestados: " + biblioteca.prestamosMasDe10(usuarios));

@@ -49,7 +49,7 @@ public class Biblioteca {
 
     public void addBookList(Book book) throws Exception {
         if(bookList.contains(book)) {
-            throw new Exception("Error: El usuario ya está registrado");
+            throw new Exception("Error: El libro ya está registrado");
         } else {
             bookList.add(book);
         }
@@ -119,7 +119,7 @@ public class Biblioteca {
     public void primerLibro(List<Book> list) throws Exception {
         Stream<Book> bookStream = list.stream();
         System.out.println(bookStream.findFirst().orElseThrow(() ->
-                new Exception("La lista de 'usuarios' está vacia")));
+                new Exception("La lista de 'libros' está vacia")));
     }
 
     public void autoresConF(List<Autor> list) {
