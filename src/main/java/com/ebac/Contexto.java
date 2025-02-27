@@ -76,18 +76,24 @@ public class Contexto {
         System.out.println("---------------");
 
         //Sistema Validación
-        System.out.println(name + apellido +" " + "está registrado: " + biblioteca.validacion(usuarios, name, apellido));
-        //Sistema Biblioteca
-        System.out.println("La cuenta de autores es: " + biblioteca.cuentaAutores(autores));
-        System.out.println("Alguno usuario tiene más de 10 libros prestados: " + biblioteca.prestamosMasDe10(usuarios));
-        System.out.println("Total de libros prestados: " + biblioteca.totalDePrestamos(usuarios));
-        System.out.println("Todos los libros fueron publicados antes del 2010: "+ biblioteca.librosAntes2010(libros));
-        biblioteca.primerLibro(libros);
-        biblioteca.autoresConF(autores);
-        biblioteca.usuariosMenos5(usuarios);
-        biblioteca.librosOrden(libros);
-        biblioteca.apellidosUsuario(usuarios);
-        biblioteca.librosBloqueados(libros);
+        boolean auth = biblioteca.validacion(usuarios, name, apellido);
+        if(auth) {
+            System.out.println("El Usuario está registrado");
+
+            //Sistema Biblioteca
+            System.out.println("La cuenta de autores es: " + biblioteca.cuentaAutores(autores));
+            System.out.println("Alguno usuario tiene más de 10 libros prestados: " + biblioteca.prestamosMasDe10(usuarios));
+            System.out.println("Total de libros prestados: " + biblioteca.totalDePrestamos(usuarios));
+            System.out.println("Todos los libros fueron publicados antes del 2010: "+ biblioteca.librosAntes2010(libros));
+            biblioteca.primerLibro(libros);
+            biblioteca.autoresConF(autores);
+            biblioteca.usuariosMenos5(usuarios);
+            biblioteca.librosOrden(libros);
+            biblioteca.apellidosUsuario(usuarios);
+            biblioteca.librosBloqueados(libros);
+        } else {
+            System.out.println("El Usuario NO está registrado");
+        }
 
     }
 
